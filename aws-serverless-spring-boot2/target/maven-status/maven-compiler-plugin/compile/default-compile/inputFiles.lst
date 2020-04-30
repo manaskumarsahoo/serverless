@@ -1,7 +1,0 @@
-D:\serverless\aws-serverless-java-container-master\samples\springboot2\pet-store\src\main\java\com\amazonaws\serverless\sample\springboot2\model\Pet.java
-D:\serverless\aws-serverless-java-container-master\samples\springboot2\pet-store\src\main\java\com\amazonaws\serverless\sample\springboot2\model\PetData.java
-D:\serverless\aws-serverless-java-container-master\samples\springboot2\pet-store\src\main\java\com\amazonaws\serverless\sample\springboot2\StreamLambdaHandler.java
-D:\serverless\aws-serverless-java-container-master\samples\springboot2\pet-store\src\main\java\com\amazonaws\serverless\sample\springboot2\Application.java
-D:\serverless\aws-serverless-java-container-master\samples\springboot2\pet-store\src\main\java\com\amazonaws\serverless\sample\springboot2\controller\PetsController.java
-D:\serverless\aws-serverless-java-container-master\samples\springboot2\pet-store\src\main\java\com\amazonaws\serverless\sample\springboot2\filter\CognitoIdentityFilter.java
-D:\serverless\aws-serverless-java-container-master\samples\springboot2\pet-store\src\main\java\com\amazonaws\serverless\sample\springboot2\model\Error.java
