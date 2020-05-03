@@ -60,3 +60,30 @@ $ aws cloudformation describe-stacks --stack-name ServerlessSpringBootSample
 ```
 
 Copy the `OutputValue` into a browser to test a first request.
+
+## Fixing Cold Start Issue
+Cold start issue of lambda containers can be fixed using WarmingSchedule property which will keep the lamda container always warm and container never get destroyed. Refer below entries in sam.yml for its configuration.
+
+```
+Resources:
+  PetStoreFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: com.amazonaws.serverless.sample.springboot2.StreamLambdaHandler::handleRequest
+      Runtime: java8
+      CodeUri: target/serverless-springboot2-example-1.0-SNAPSHOT-lambda-package.zip
+      MemorySize: 1512
+      Policies: AWSLambdaBasicExecutionRole
+      Timeout: 60
+      Events:
+        WarmingSchedule:
+          Type: Schedule
+          Properties:
+            Schedule: rate(5 minutes)
+            Input: '{ "warmer":true,"concurrency":3 }'
+        GetResource:
+          Type: Api
+          Properties:
+            Path: /pets
+            Method: any
+```
